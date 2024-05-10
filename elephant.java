@@ -20,7 +20,7 @@ public class Elephant extends Actor
         for(int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("C:/Users/34882/Downloads/dodgeit-AngelicaEps-main/dodgeit-AngelicaEps-main/hungry-animal-AngelicaEps/images/elephant_idle/idle" + i + ".png");
-            
+            idle[i].scale(100,100);
         }
         
     }
@@ -36,11 +36,11 @@ public class Elephant extends Actor
         // Add your action code here.
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-1);
+            move(-5);
         }
         else if(Greenfoot.isKeyDown("d"))
         {
-            move(1);
+            move(5);
         }
         
         eat();
