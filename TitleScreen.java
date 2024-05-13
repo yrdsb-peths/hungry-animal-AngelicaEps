@@ -52,5 +52,13 @@ public class TitleScreen extends World
         Label label = new Label("Press Space to Start", 30);
         addObject(label,271,298);
         label.setLocation(294,282);
+        removeObject(apple);
+        elephant.setLocation(292,100);
+        Label label2 = new Label("Press Space to Start", 30);
+        addObject(label2,360,338);
+        removeObject(label2);
+        label2 = new Label("Use A and D to Move", 30);
+        addObject(label2,280,346);
+        label2.setLocation(296,321);
     }
 }
