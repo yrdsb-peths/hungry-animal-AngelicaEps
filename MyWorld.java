@@ -48,10 +48,31 @@ public class MyWorld extends World
     }
     public void createApple()
     {
-        Apple apple = new Apple();
-        apple.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
-        addObject(apple, x, y);
+        if(level > 1)
+        {
+            if(Greenfoot.getRandomNumber(7) == 1)
+            {
+                SlowApple slowApple = new SlowApple();
+                int a = Greenfoot.getRandomNumber(600);
+                int b = 0;
+                addObject(slowApple, a, b);
+            }
+            else
+            {
+                Apple apple = new Apple();
+                apple.setSpeed(level);
+                int x = Greenfoot.getRandomNumber(600);
+                int y = 0;
+                addObject(apple, x, y);
+            }
+        }
+        else
+        {
+            Apple apple = new Apple();
+            apple.setSpeed(level);
+            int x = Greenfoot.getRandomNumber(600);
+            int y = 0;
+            addObject(apple, x, y);
+        }
     }
 }
