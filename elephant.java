@@ -18,6 +18,7 @@ public class Elephant extends Actor
     
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
+    int speed = 3;
     
     public Elephant()
     {
@@ -61,12 +62,12 @@ public class Elephant extends Actor
         // Add your action code here.
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-5);
+            move(-speed);
             facing = "left";
         }
         else if(Greenfoot.isKeyDown("d"))
         {
-            move(5);
+            move(speed);
             facing = "right";
         }
         
@@ -93,6 +94,14 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.level -= 1; 
             world.createApple();
+        }
+        else if(isTouching(ScoreUp.class))
+        {
+            removeTouching(ScoreUp.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+            world.score += 5;
+            world.level -= 1;
         }
     }
     

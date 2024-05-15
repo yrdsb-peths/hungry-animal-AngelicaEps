@@ -23,7 +23,7 @@ public class MyWorld extends World
         super(600, 400, 1, false); 
         
         Elephant elephant = new Elephant();
-        addObject(elephant, 300, 200);
+        addObject(elephant, 300, 300);
         
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
@@ -56,6 +56,13 @@ public class MyWorld extends World
                 int a = Greenfoot.getRandomNumber(600);
                 int b = 0;
                 addObject(slowApple, a, b);
+            }
+            else if(Greenfoot.getRandomNumber(7) == 2)
+            {
+                ScoreUp scoreUp = new ScoreUp();
+                int a = Greenfoot.getRandomNumber(600);
+                int b = 0;
+                addObject(scoreUp, a, b);
             }
             else
             {
