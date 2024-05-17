@@ -103,6 +103,13 @@ public class Elephant extends Actor
             world.score += 5;
             world.level -= 1;
         }
+        else if(isTouching(SpeedUp.class))
+        {
+            removeTouching(SpeedUp.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+            speed = 3;
+        }
     }
     
 }

@@ -50,7 +50,7 @@ public class MyWorld extends World
     {
         if(level > 1)
         {
-            if(Greenfoot.getRandomNumber(7) == 1)
+            if(Greenfoot.getRandomNumber(8) == 1)
             {
                 SlowApple slowApple = new SlowApple();
                 int a = Greenfoot.getRandomNumber(600);
@@ -63,6 +63,13 @@ public class MyWorld extends World
                 int a = Greenfoot.getRandomNumber(600);
                 int b = 0;
                 addObject(scoreUp, a, b);
+            }
+            else if (Greenfoot.getRandomNumber(10) == 3)
+            {
+                SpeedUp speedUp = new SpeedUp();
+                int a = Greenfoot.getRandomNumber(600);
+                int b = 0;
+                addObject(speedUp, a, b);
             }
             else
             {
