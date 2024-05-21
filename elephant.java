@@ -24,13 +24,13 @@ public class Elephant extends Actor
     {
         for(int i = 0; i < idleRight.length; i++)
         {
-            idleRight[i] = new GreenfootImage("C:/Users/34882/Downloads/dodgeit-AngelicaEps-main/dodgeit-AngelicaEps-main/hungry-animal-AngelicaEps/images/elephant_idle/idle" + i + ".png");
+            idleRight[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
             idleRight[i].scale(100,100);
         }
         
         for(int i = 0; i < idleLeft.length;i++)
         {
-            idleLeft[i] = new GreenfootImage("C:/Users/34882/Downloads/dodgeit-AngelicaEps-main/dodgeit-AngelicaEps-main/hungry-animal-AngelicaEps/images/elephant_idle/idle" + i + ".png");
+            idleLeft[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(100,100);
         }
