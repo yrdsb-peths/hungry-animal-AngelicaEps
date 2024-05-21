@@ -99,16 +99,15 @@ public class Elephant extends Actor
         {
             removeTouching(ScoreUp.class);
             MyWorld world = (MyWorld) getWorld();
+            world.score += 3;
             world.createApple();
-            world.score += 5;
-            world.level -= 1;
         }
         else if(isTouching(SpeedUp.class))
         {
             removeTouching(SpeedUp.class);
             MyWorld world = (MyWorld) getWorld();
+            speed = 5;
             world.createApple();
-            speed = 3;
         }
     }
     

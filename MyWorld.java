@@ -80,6 +80,13 @@ public class MyWorld extends World
                 addObject(apple, x, y);
             }
         }
+        else if(Greenfoot.getRandomNumber(7) == 2)
+        {
+            ScoreUp scoreUp = new ScoreUp();
+            int a = Greenfoot.getRandomNumber(600);
+            int b = 0;
+            addObject(scoreUp, a, b);
+        }
         else
         {
             Apple apple = new Apple();
@@ -88,5 +95,6 @@ public class MyWorld extends World
             int y = 0;
             addObject(apple, x, y);
         }
+
     }
 }
